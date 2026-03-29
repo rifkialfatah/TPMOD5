@@ -1,32 +1,24 @@
 ﻿using System;
 
-    
 namespace TP_MODUL5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataGeneric<string> data = new DataGeneric<string>("103022400057");
+            HaloGeneric halo = new HaloGeneric();
 
-            data.PrintData();
+            halo.SapaUser<string>("Ikki");
 
             Console.ReadLine();
         }
     }
 
-    class DataGeneric<T>
+    class HaloGeneric
     {
-        public T data;
-
-        public DataGeneric(T data)
+        public void SapaUser<T>(T user)
         {
-            this.data = data;
-        }
-
-        public void PrintData()
-        {
-            Console.WriteLine("Data yang tersimpan adalah: " + data);
+            Console.WriteLine("Halo user " + user);
         }
     }
 }
